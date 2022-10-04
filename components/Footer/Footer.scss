@@ -1,0 +1,129 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 42px;
+  padding-bottom: 20px;
+  row-gap: 50px;
+  background: $purpleBlueGradient;
+  width: 100%;
+  position: relative;
+
+  @media (--mobile) {
+    padding-bottom: 50px;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    grid-template-areas:
+      "logo logo"
+      "services services"
+      "company company"
+      "contacts socials";
+  }
+
+  @media (--mobile) {
+    &__socials {
+      grid-area: socials;
+    }
+
+    &__services {
+      grid-area: services;
+    }
+
+    &__company {
+      grid-area: company;
+    }
+
+    &__contacts {
+      grid-area: contacts;
+    }
+
+    &__socials {
+      grid-area: socials;
+    }
+  }
+
+  &__main-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    small {
+      position: absolute;
+      bottom: 20px;
+    }
+
+    @media (--mobile) {
+      grid-area: logo;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    max-width: 209px;
+  }
+
+  &__column-title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__dot {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    background: $white;
+    margin-top: 5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    li {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+
+  &__logo {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 0.75;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__policy {
+    margin-top: 25px;
+  }
+}

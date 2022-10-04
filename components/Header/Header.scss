@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+
+  @media (--tablet) {
+    padding: 34px 42px;
+  }
+
+  @media (--mobile) {
+    padding: 29px 40px;
+  }
+
+  &__burger-button {
+    background-color: transparent;
+    display: none;
+
+    @media (--mobile) {
+      display: inline-block;
+    }
+  }
+
+  &__logo {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.25;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    column-gap: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.16;
+  }
+
+  &__link {
+    position: relative;
+
+    &_active {
+      color: $blue;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        background: $blue;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  &__language-buttons {
+    display: flex;
+    column-gap: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__language-button {
+    position: relative;
+
+    &_active {
+      color: $blue;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        background: $blue;
+      }
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__start-button {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

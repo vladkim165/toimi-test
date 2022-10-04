@@ -1,0 +1,10 @@
+@import "./normalize.css";
+@import "./fonts/fonts.scss";
+
+@import "./variables.scss";
+@import "./customMediaQueries.css";
+@import "./globals.scss";
+
+@import "../components/Header/Header.scss";
+@import "../components/Footer/Footer.scss";
+@import "../components/ContactsForm/ContactsForm.scss";

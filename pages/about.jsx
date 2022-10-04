@@ -3,11 +3,11 @@ import { nextI18NextConfig } from '../next-i18next.config.mjs';
 
 import ContactsForm from '../components/ContactsForm/ContactsForm';
 
-const Index = () => {
+const About = () => {
   return (
     <ContactsForm />
-  );
-};
+  )
+}
 
 export const getStaticProps = async ({ locale = 'en' }) => {
   return {
@@ -15,6 +15,6 @@ export const getStaticProps = async ({ locale = 'en' }) => {
       ...await serverSideTranslations(locale, ['common'], nextI18NextConfig),
     },
   };
-};
+}
 
-export default Index;
+export default About;
