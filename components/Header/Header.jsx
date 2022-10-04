@@ -15,9 +15,6 @@ const Header = () => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
-  useEffect(() => {
-    console.log(currentRoute)
-  }, [currentRoute])
 
   useEffect(() => {
     setCurrentLang(i18n.language)
